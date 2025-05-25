@@ -1,6 +1,7 @@
 // @ts-nocheck
 import * as React from 'react';
 import { SectionWrapper } from '../SectionWrapper';
+import { BoltIconDemo } from '../icons/DemoIcons';
 
 const TOOL_CATEGORIES = [
   {
@@ -70,12 +71,20 @@ const ToolBadge = ({ tool }: { tool: string }) => (
 );
 
 export const ToolStackSection: React.FC = () => {
+  // Replace with your actual tool stack data and rendering logic
+  const tools = [
+    { name: 'Python', icon: '🐍' },
+    { name: 'JavaScript', icon: '💻' },
+    { name: 'React', icon: '⚛️' },
+    // Add more tools with their icons
+  ];
+
   return (
     <SectionWrapper
       id="tools"
-      titleTag="Tool Stack"
-      mainTitle="My Digital Toolkit"
-      subtitle="Professional tools and platforms I use to drive marketing success and deliver exceptional results."
+      titleTag="My Toolkit"
+      mainTitle="DIGITAL TOOLKIT"
+      icon={<BoltIconDemo className="w-6 h-6 text-[#F4A623]" />}
     >
       <div className="toolkit-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] mb-12">
         {TOOL_CATEGORIES.map((cat) => (
